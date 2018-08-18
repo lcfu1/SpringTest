@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd ">
+    <aop:aspectj-autoproxy/>
+    <!--自动扫描-->
+    <context:component-scan base-package="com"/>
+
+    <!--&lt;!&ndash;一个目标的bean&ndash;&gt;-->
+    <!--<bean id="userService" class="UserService"/>-->
+    <!--&lt;!&ndash;一个切面bean&ndash;&gt;-->
+    <!--<bean class="ServiceAdvisor"/>-->
+
+    <!--&lt;!&ndash;利用默认构造，指定属性进行bean的生成&ndash;&gt;-->
+    <!--&lt;!&ndash;要求属性名称正确，且要有setter方法&ndash;&gt;-->
+    <!--<bean id="user" class="User">-->
+    <!--<property name="id" value="1"/>-->
+    <!--<property name="username" value="2"/>-->
+    <!--<property name="password" value="3"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;自定义构造函数，指定属性进行bean的生成&ndash;&gt;-->
+    <!--<bean id="user1" class="User">-->
+    <!--<constructor-arg index="0" value="4"/>-->
+    <!--<constructor-arg index="1" value="5"/>-->
+    <!--<constructor-arg index="2" value="6"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="userDao" class="UserDaoImpl">-->
+    <!--</bean>-->
+
+    <!--<bean id="userService" class="UserServiceImpl">-->
+    <!--<property name="udi" ref="userDao"/>-->
+    <!--</bean>-->
+
+</beans>
